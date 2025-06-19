@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Jump</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Música de fundo -->
+    <audio id="musica-fundo" autoplay loop>
+        <source src="./img/som/audio_mario.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <!-- Som de colisão -->
+    <audio id="som-gameover">
+        <source src="./img/som/batida.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Som ao pegar moeda -->
+     <audio id="som-moeda">
+        <source src="./img/som/moeda.mp3" type="audio/mp3">
+     </audio>
+
+    <div class="game-board">
+        <img src="./img/moeda.png" class="moeda">
+        <img src="./img/clouds.png" class="clouds">
+        <img src="./img/mario.gif" class="mario">
+        <img src="./img/pipe.png" class="pipe">
+
+        <!-- Marcador de pontos e moedas -->
+        <div class="score">
+            Pontos: <span id="pontos">0</span>
+        </div>
+
+        <div class="moeda-score">
+            Moedas: <span id="moedas">0</span>
+        </div>
+
+        <!-- Tela de Game Over estilo Mario Cat -->
+        <div id="game-over-screen" style="display: none;" class="game-over-screen">
+            <h1>💀 Game Over</h1>
+            <p>Deseja jogar novamente?</p>
+            <button onclick="reiniciarJogo()">🔁 Jogar Novamente</button>
+        </div>
+    </div>
+
+</body>
+</html>
